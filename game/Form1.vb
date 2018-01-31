@@ -1,7 +1,7 @@
 ﻿' Rocket Game by Gabriel Simmer, originally by Bill Gates (apparently)
 ' Created for IT 12 class
-
 #Disable Warning BC42105 ' Function doesn't return a value on all code paths
+
 Public Class GameWindow
     ' Functions for setting values as well as text boxes
     ' Helpful for keeping code cleaner
@@ -61,7 +61,10 @@ Public Class GameWindow
     ' Handle burn button click, remove specified fuel and advance a tick
     Private Sub Burn_Click(sender As Object, e As EventArgs) Handles BurnButton.Click
         Dim BurntFuel As Integer = BurnRateSelector.Value
+
+        ' Sophisticated anti-cheat
         If BurntFuel < 0 Then BurntFuel = 0 ' This is to prevent negative values giving user MORE fuel
+        If BurntFuel > GlobalVariables.fuel Then BurntFuel = GlobalVariables.fuel ' This is to prevent negative fuel values
         ' Winners don't use drugs
 
         ' Logic for figuring out speed, time, alt etc

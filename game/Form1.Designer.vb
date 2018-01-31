@@ -81,7 +81,7 @@ Partial Class GameWindow
         '
         Me.BurnButton.Location = New System.Drawing.Point(107, 139)
         Me.BurnButton.Name = "BurnButton"
-        Me.BurnButton.Size = New System.Drawing.Size(172, 23)
+        Me.BurnButton.Size = New System.Drawing.Size(171, 23)
         Me.BurnButton.TabIndex = 5
         Me.BurnButton.Text = "Run Turn"
         Me.BurnButton.UseVisualStyleBackColor = True
@@ -171,7 +171,7 @@ Partial Class GameWindow
         '
         Me.BurnRateSelector.Location = New System.Drawing.Point(108, 113)
         Me.BurnRateSelector.Name = "BurnRateSelector"
-        Me.BurnRateSelector.Size = New System.Drawing.Size(171, 20)
+        Me.BurnRateSelector.Size = New System.Drawing.Size(170, 20)
         Me.BurnRateSelector.TabIndex = 15
         '
         'PictureBox2
