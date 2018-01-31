@@ -81,7 +81,7 @@ Partial Class GameWindow
         '
         Me.BurnButton.Location = New System.Drawing.Point(107, 139)
         Me.BurnButton.Name = "BurnButton"
-        Me.BurnButton.Size = New System.Drawing.Size(171, 23)
+        Me.BurnButton.Size = New System.Drawing.Size(172, 23)
         Me.BurnButton.TabIndex = 5
         Me.BurnButton.Text = "Run Turn"
         Me.BurnButton.UseVisualStyleBackColor = True
@@ -115,6 +115,8 @@ Partial Class GameWindow
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Black
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Location = New System.Drawing.Point(39, 12)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(44, 13)
@@ -124,6 +126,8 @@ Partial Class GameWindow
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Black
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
         Me.Label2.Location = New System.Drawing.Point(39, 35)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(57, 13)
@@ -133,6 +137,8 @@ Partial Class GameWindow
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Black
+        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
         Me.Label3.Location = New System.Drawing.Point(39, 61)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(63, 13)
@@ -142,6 +148,8 @@ Partial Class GameWindow
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Black
+        Me.Label4.ForeColor = System.Drawing.SystemColors.Control
         Me.Label4.Location = New System.Drawing.Point(39, 90)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(44, 13)
@@ -151,6 +159,8 @@ Partial Class GameWindow
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Black
+        Me.Label5.ForeColor = System.Drawing.SystemColors.Control
         Me.Label5.Location = New System.Drawing.Point(39, 117)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(55, 13)
@@ -187,6 +197,7 @@ Partial Class GameWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(544, 473)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
@@ -204,6 +215,9 @@ Partial Class GameWindow
         Me.Controls.Add(Me.SpeedBox)
         Me.Controls.Add(Me.AltBox)
         Me.Controls.Add(Me.TimeBox)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "GameWindow"
         Me.Text = "Rocket Game"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
