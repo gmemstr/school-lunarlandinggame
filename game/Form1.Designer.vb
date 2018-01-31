@@ -22,6 +22,7 @@ Partial Class GameWindow
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GameWindow))
         Me.TimeBox = New System.Windows.Forms.TextBox()
         Me.AltBox = New System.Windows.Forms.TextBox()
         Me.SpeedBox = New System.Windows.Forms.TextBox()
@@ -174,7 +175,8 @@ Partial Class GameWindow
         '
         'PictureBox3
         '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Blue
+        Me.PictureBox3.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
         Me.PictureBox3.Location = New System.Drawing.Point(410, 12)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(38, 53)
