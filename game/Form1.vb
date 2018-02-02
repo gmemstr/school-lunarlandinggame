@@ -38,7 +38,7 @@ Public Class GameWindow
         SetTime(0)
         SetAlt(1000)
         SetSpeed(60)
-        SetFuel(150)
+        SetFuel(300)
         PictureBox3.Top = PictureBox1.Top
 
         BurnRateSelector.Value = 0
@@ -70,7 +70,7 @@ Public Class GameWindow
         ' Logic for figuring out speed, time, alt etc
         SetFuel(GlobalVariables.fuel - BurntFuel)
         SetTime(GlobalVariables.time + 1)
-        SetSpeed(GlobalVariables.speed - (BurntFuel / 2))
+        SetSpeed(GlobalVariables.speed - (BurntFuel * 0.75))
         SetAlt(GlobalVariables.alt - GlobalVariables.speed)
         PictureBox3.Top = PictureBox3.Top + GlobalVariables.speed / 3
 
@@ -97,7 +97,7 @@ End Class
 
 ' Global variables for keeping track of stats
 Public Class GlobalVariables
-    ' Define time, altitude, fuel and speed integer variables
-    Public Shared time, alt, fuel, speed As Integer
+    ' Define time, altitude, fuel and speed double variables
+    Public Shared time, alt, fuel, speed As Double
     Public Shared log As String ' Log output
 End Class
