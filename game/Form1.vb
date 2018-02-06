@@ -19,7 +19,7 @@ Public Class GameWindow
         GlobalVariables.alt = val
         AltBox.Text = val.ToString
         ' Set picture box location at the same time
-        PictureBox3.Top = PictureBox3.Top + GlobalVariables.speed / 3
+        RocketPicture.Top = RocketPicture.Top + GlobalVariables.speed / 3
     End Function
 
     Public Function SetSpeed(val As Integer)
@@ -36,7 +36,7 @@ Public Class GameWindow
     Public Function NewGame()
         ' Stop audio if it's still playing for some reason?!
         My.Computer.Audio.Stop()
-        PictureBox3.Image = My.Resources.ship
+        RocketPicture.Image = My.Resources.ship
         BurnButton.Enabled = True
         AddToLog("------------ New Game ------------")
         ' Reset variables
@@ -44,7 +44,7 @@ Public Class GameWindow
         SetAlt(1000)
         SetSpeed(60)
         SetFuel(200)
-        PictureBox3.Top = PictureBox1.Top
+        RocketPicture.Top = Background.Top
 
         BurnRateSelector.Value = 0
     End Function

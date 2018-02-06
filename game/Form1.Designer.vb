@@ -30,19 +30,19 @@ Partial Class GameWindow
         Me.BurnButton = New System.Windows.Forms.Button()
         Me.NewGameButton = New System.Windows.Forms.Button()
         Me.LogBox = New System.Windows.Forms.RichTextBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Background = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.BurnRateSelector = New System.Windows.Forms.NumericUpDown()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Floor = New System.Windows.Forms.PictureBox()
+        Me.RocketPicture = New System.Windows.Forms.PictureBox()
+        CType(Me.Background, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BurnRateSelector, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Floor, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RocketPicture, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TimeBox
@@ -112,15 +112,15 @@ Partial Class GameWindow
         Me.LogBox.TabIndex = 8
         Me.LogBox.Text = "Please click 'New Game'"
         '
-        'PictureBox1
+        'Background
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Black
-        Me.PictureBox1.Location = New System.Drawing.Point(492, 14)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(306, 695)
-        Me.PictureBox1.TabIndex = 9
-        Me.PictureBox1.TabStop = False
+        Me.Background.BackColor = System.Drawing.Color.Black
+        Me.Background.Location = New System.Drawing.Point(492, 14)
+        Me.Background.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Background.Name = "Background"
+        Me.Background.Size = New System.Drawing.Size(306, 695)
+        Me.Background.TabIndex = 9
+        Me.Background.TabStop = False
         '
         'Label1
         '
@@ -190,26 +190,26 @@ Partial Class GameWindow
         Me.BurnRateSelector.Size = New System.Drawing.Size(255, 26)
         Me.BurnRateSelector.TabIndex = 15
         '
-        'PictureBox2
+        'Floor
         '
-        Me.PictureBox2.BackColor = System.Drawing.Color.Red
-        Me.PictureBox2.Location = New System.Drawing.Point(492, 668)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(306, 41)
-        Me.PictureBox2.TabIndex = 16
-        Me.PictureBox2.TabStop = False
+        Me.Floor.BackColor = System.Drawing.Color.Red
+        Me.Floor.Location = New System.Drawing.Point(492, 668)
+        Me.Floor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Floor.Name = "Floor"
+        Me.Floor.Size = New System.Drawing.Size(306, 41)
+        Me.Floor.TabIndex = 16
+        Me.Floor.TabStop = False
         '
-        'PictureBox3
+        'RocketPicture
         '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(618, 18)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(46, 84)
-        Me.PictureBox3.TabIndex = 17
-        Me.PictureBox3.TabStop = False
+        Me.RocketPicture.BackColor = System.Drawing.Color.Transparent
+        Me.RocketPicture.Image = CType(resources.GetObject("RocketPicture.Image"), System.Drawing.Image)
+        Me.RocketPicture.Location = New System.Drawing.Point(618, 18)
+        Me.RocketPicture.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.RocketPicture.Name = "RocketPicture"
+        Me.RocketPicture.Size = New System.Drawing.Size(46, 84)
+        Me.RocketPicture.TabIndex = 17
+        Me.RocketPicture.TabStop = False
         '
         'GameWindow
         '
@@ -217,15 +217,15 @@ Partial Class GameWindow
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(816, 728)
-        Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.RocketPicture)
+        Me.Controls.Add(Me.Floor)
         Me.Controls.Add(Me.BurnRateSelector)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Background)
         Me.Controls.Add(Me.LogBox)
         Me.Controls.Add(Me.NewGameButton)
         Me.Controls.Add(Me.BurnButton)
@@ -239,10 +239,10 @@ Partial Class GameWindow
         Me.MinimizeBox = False
         Me.Name = "GameWindow"
         Me.Text = "Rocket Game"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Background, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BurnRateSelector, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Floor, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RocketPicture, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -255,13 +255,13 @@ Partial Class GameWindow
     Friend WithEvents BurnButton As Button
     Friend WithEvents NewGameButton As Button
     Friend WithEvents LogBox As RichTextBox
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Background As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents BurnRateSelector As NumericUpDown
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents RocketPicture As PictureBox
+    Friend WithEvents Floor As PictureBox
 End Class
