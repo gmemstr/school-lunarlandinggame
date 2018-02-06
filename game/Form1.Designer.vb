@@ -193,10 +193,10 @@ Partial Class GameWindow
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Red
-        Me.PictureBox2.Location = New System.Drawing.Point(492, 598)
+        Me.PictureBox2.Location = New System.Drawing.Point(492, 668)
         Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(306, 111)
+        Me.PictureBox2.Size = New System.Drawing.Size(306, 41)
         Me.PictureBox2.TabIndex = 16
         Me.PictureBox2.TabStop = False
         '
@@ -207,7 +207,7 @@ Partial Class GameWindow
         Me.PictureBox3.Location = New System.Drawing.Point(618, 18)
         Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(49, 96)
+        Me.PictureBox3.Size = New System.Drawing.Size(46, 84)
         Me.PictureBox3.TabIndex = 17
         Me.PictureBox3.TabStop = False
         '

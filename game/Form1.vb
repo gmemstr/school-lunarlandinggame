@@ -36,6 +36,7 @@ Public Class GameWindow
     Public Function NewGame()
         ' Stop audio if it's still playing for some reason?!
         My.Computer.Audio.Stop()
+        PictureBox3.Image = My.Resources.ship
         BurnButton.Enabled = True
         AddToLog("------------ New Game ------------")
         ' Reset variables
