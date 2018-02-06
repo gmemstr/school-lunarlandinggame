@@ -202,7 +202,7 @@ Partial Class GameWindow
         '
         'PictureBox3
         '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Black
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
         Me.PictureBox3.Location = New System.Drawing.Point(618, 18)
         Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)

@@ -34,6 +34,8 @@ Public Class GameWindow
 
     ' Set values for a new game
     Public Function NewGame()
+        ' Stop audio if it's still playing for some reason?!
+        My.Computer.Audio.Stop()
         BurnButton.Enabled = True
         AddToLog("------------ New Game ------------")
         ' Reset variables
@@ -81,14 +83,19 @@ Public Class GameWindow
         ' Check lose/win conditions (respectively)
         ' Add condition to log and disable "next turn" button
         If GlobalVariables.fuel <= 0 And GlobalVariables.alt > 0 Then
+            My.Computer.Audio.Play(My.Resources.nofuel, AudioPlayMode.Background)
             AddToLog("You ran out of fuel!")
             BurnButton.Enabled = False
         End If
         If GlobalVariables.alt <= 0 And GlobalVariables.speed > 10 Then
+            SetAlt(0)
+            My.Computer.Audio.Play(My.Resources.CRASHCRASHCRASH, AudioPlayMode.Background)
             AddToLog("You crashed!")
             BurnButton.Enabled = False
         End If
         If GlobalVariables.alt <= 0 And GlobalVariables.speed < 10 Then
+            SetAlt(0)
+            My.Computer.Audio.Play(My.Resources.win, AudioPlayMode.Background)
             AddToLog("You Landed safely!")
             BurnButton.Enabled = False
         End If
