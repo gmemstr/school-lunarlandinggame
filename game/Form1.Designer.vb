@@ -47,68 +47,78 @@ Partial Class GameWindow
         '
         'TimeBox
         '
-        Me.TimeBox.Location = New System.Drawing.Point(107, 9)
+        Me.TimeBox.Location = New System.Drawing.Point(160, 14)
+        Me.TimeBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TimeBox.Name = "TimeBox"
         Me.TimeBox.ReadOnly = True
-        Me.TimeBox.Size = New System.Drawing.Size(171, 20)
+        Me.TimeBox.Size = New System.Drawing.Size(254, 26)
         Me.TimeBox.TabIndex = 0
         '
         'AltBox
         '
-        Me.AltBox.Location = New System.Drawing.Point(107, 35)
+        Me.AltBox.Location = New System.Drawing.Point(160, 54)
+        Me.AltBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.AltBox.Name = "AltBox"
         Me.AltBox.ReadOnly = True
-        Me.AltBox.Size = New System.Drawing.Size(171, 20)
+        Me.AltBox.Size = New System.Drawing.Size(254, 26)
         Me.AltBox.TabIndex = 1
         '
         'SpeedBox
         '
-        Me.SpeedBox.Location = New System.Drawing.Point(107, 61)
+        Me.SpeedBox.Location = New System.Drawing.Point(160, 94)
+        Me.SpeedBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.SpeedBox.Name = "SpeedBox"
         Me.SpeedBox.ReadOnly = True
-        Me.SpeedBox.Size = New System.Drawing.Size(171, 20)
+        Me.SpeedBox.Size = New System.Drawing.Size(254, 26)
         Me.SpeedBox.TabIndex = 2
+        Me.SpeedBox.Text = " "
         '
         'FuelBox
         '
-        Me.FuelBox.Location = New System.Drawing.Point(107, 87)
+        Me.FuelBox.Location = New System.Drawing.Point(160, 134)
+        Me.FuelBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.FuelBox.Name = "FuelBox"
         Me.FuelBox.ReadOnly = True
-        Me.FuelBox.Size = New System.Drawing.Size(171, 20)
+        Me.FuelBox.Size = New System.Drawing.Size(254, 26)
         Me.FuelBox.TabIndex = 3
         '
         'BurnButton
         '
-        Me.BurnButton.Location = New System.Drawing.Point(107, 139)
+        Me.BurnButton.Location = New System.Drawing.Point(160, 214)
+        Me.BurnButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.BurnButton.Name = "BurnButton"
-        Me.BurnButton.Size = New System.Drawing.Size(171, 23)
+        Me.BurnButton.Size = New System.Drawing.Size(256, 35)
         Me.BurnButton.TabIndex = 5
         Me.BurnButton.Text = "Run Turn"
         Me.BurnButton.UseVisualStyleBackColor = True
         '
         'NewGameButton
         '
-        Me.NewGameButton.Location = New System.Drawing.Point(8, 438)
+        Me.NewGameButton.Location = New System.Drawing.Point(12, 674)
+        Me.NewGameButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.NewGameButton.Name = "NewGameButton"
-        Me.NewGameButton.Size = New System.Drawing.Size(75, 23)
+        Me.NewGameButton.Size = New System.Drawing.Size(112, 35)
         Me.NewGameButton.TabIndex = 7
         Me.NewGameButton.Text = "New Game"
         Me.NewGameButton.UseVisualStyleBackColor = True
         '
         'LogBox
         '
-        Me.LogBox.Location = New System.Drawing.Point(8, 170)
+        Me.LogBox.Location = New System.Drawing.Point(12, 262)
+        Me.LogBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.LogBox.Name = "LogBox"
-        Me.LogBox.Size = New System.Drawing.Size(310, 262)
+        Me.LogBox.ReadOnly = True
+        Me.LogBox.Size = New System.Drawing.Size(463, 401)
         Me.LogBox.TabIndex = 8
         Me.LogBox.Text = "Please click 'New Game'"
         '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Black
-        Me.PictureBox1.Location = New System.Drawing.Point(328, 9)
+        Me.PictureBox1.Location = New System.Drawing.Point(492, 14)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(204, 452)
+        Me.PictureBox1.Size = New System.Drawing.Size(306, 695)
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
         '
@@ -117,9 +127,10 @@ Partial Class GameWindow
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Black
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label1.Location = New System.Drawing.Point(39, 12)
+        Me.Label1.Location = New System.Drawing.Point(58, 18)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(44, 13)
+        Me.Label1.Size = New System.Drawing.Size(65, 20)
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Time (s)"
         '
@@ -128,9 +139,10 @@ Partial Class GameWindow
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Black
         Me.Label2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label2.Location = New System.Drawing.Point(39, 35)
+        Me.Label2.Location = New System.Drawing.Point(58, 54)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(57, 13)
+        Me.Label2.Size = New System.Drawing.Size(87, 20)
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "Altitude (ft)"
         '
@@ -139,9 +151,10 @@ Partial Class GameWindow
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Black
         Me.Label3.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label3.Location = New System.Drawing.Point(39, 61)
+        Me.Label3.Location = New System.Drawing.Point(58, 94)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(63, 13)
+        Me.Label3.Size = New System.Drawing.Size(92, 20)
         Me.Label3.TabIndex = 12
         Me.Label3.Text = "Speed (ft/s)"
         '
@@ -150,9 +163,10 @@ Partial Class GameWindow
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Black
         Me.Label4.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label4.Location = New System.Drawing.Point(39, 90)
+        Me.Label4.Location = New System.Drawing.Point(58, 138)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(44, 13)
+        Me.Label4.Size = New System.Drawing.Size(66, 20)
         Me.Label4.TabIndex = 13
         Me.Label4.Text = "Fuel (lb)"
         '
@@ -161,44 +175,48 @@ Partial Class GameWindow
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Black
         Me.Label5.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label5.Location = New System.Drawing.Point(39, 117)
+        Me.Label5.Location = New System.Drawing.Point(58, 180)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(55, 13)
+        Me.Label5.Size = New System.Drawing.Size(82, 20)
         Me.Label5.TabIndex = 14
         Me.Label5.Text = "Burn Rate"
         '
         'BurnRateSelector
         '
-        Me.BurnRateSelector.Location = New System.Drawing.Point(108, 113)
+        Me.BurnRateSelector.Location = New System.Drawing.Point(162, 174)
+        Me.BurnRateSelector.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.BurnRateSelector.Name = "BurnRateSelector"
-        Me.BurnRateSelector.Size = New System.Drawing.Size(170, 20)
+        Me.BurnRateSelector.Size = New System.Drawing.Size(255, 26)
         Me.BurnRateSelector.TabIndex = 15
         '
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Red
-        Me.PictureBox2.Location = New System.Drawing.Point(328, 389)
+        Me.PictureBox2.Location = New System.Drawing.Point(492, 598)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(204, 72)
+        Me.PictureBox2.Size = New System.Drawing.Size(306, 111)
         Me.PictureBox2.TabIndex = 16
         Me.PictureBox2.TabStop = False
         '
         'PictureBox3
         '
-        Me.PictureBox3.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.PictureBox3.BackColor = System.Drawing.Color.Black
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(410, 12)
+        Me.PictureBox3.Location = New System.Drawing.Point(618, 18)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(38, 53)
+        Me.PictureBox3.Size = New System.Drawing.Size(49, 96)
         Me.PictureBox3.TabIndex = 17
         Me.PictureBox3.TabStop = False
         '
         'GameWindow
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
-        Me.ClientSize = New System.Drawing.Size(544, 473)
+        Me.ClientSize = New System.Drawing.Size(816, 728)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.BurnRateSelector)
@@ -216,6 +234,7 @@ Partial Class GameWindow
         Me.Controls.Add(Me.AltBox)
         Me.Controls.Add(Me.TimeBox)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "GameWindow"

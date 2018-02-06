@@ -18,6 +18,8 @@ Public Class GameWindow
     Public Function SetAlt(val As Integer)
         GlobalVariables.alt = val
         AltBox.Text = val.ToString
+        ' Set picture box location at the same time
+        PictureBox3.Top = PictureBox3.Top + GlobalVariables.speed / 3
     End Function
 
     Public Function SetSpeed(val As Integer)
@@ -38,14 +40,14 @@ Public Class GameWindow
         SetTime(0)
         SetAlt(1000)
         SetSpeed(60)
-        SetFuel(300)
+        SetFuel(200)
         PictureBox3.Top = PictureBox1.Top
 
         BurnRateSelector.Value = 0
     End Function
 
     Private Sub WindowLoads(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' On load, give rules and set values
+        ' On load, give rules and make new game
         AddToLog("The goal is to land with a speed of less than 10ft/s")
 
         NewGame()
@@ -72,9 +74,8 @@ Public Class GameWindow
         SetTime(GlobalVariables.time + 1)
         SetSpeed(GlobalVariables.speed - (BurntFuel * 0.75))
         SetAlt(GlobalVariables.alt - GlobalVariables.speed)
-        PictureBox3.Top = PictureBox3.Top + GlobalVariables.speed / 3
 
-        ' Reset speed se we keep GOING DOWN (oops)
+        ' Reset speed so we keep GOING DOWN (oops)
         SetSpeed(GlobalVariables.speed + 3)
 
         ' Check lose/win conditions (respectively)
