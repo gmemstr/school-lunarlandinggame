@@ -87,7 +87,7 @@ Partial Class GameWindow
         Me.BurnButton.Location = New System.Drawing.Point(160, 214)
         Me.BurnButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.BurnButton.Name = "BurnButton"
-        Me.BurnButton.Size = New System.Drawing.Size(256, 35)
+        Me.BurnButton.Size = New System.Drawing.Size(254, 35)
         Me.BurnButton.TabIndex = 5
         Me.BurnButton.Text = "Run Turn"
         Me.BurnButton.UseVisualStyleBackColor = True
@@ -104,11 +104,11 @@ Partial Class GameWindow
         '
         'LogBox
         '
-        Me.LogBox.Location = New System.Drawing.Point(12, 262)
+        Me.LogBox.Location = New System.Drawing.Point(13, 262)
         Me.LogBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.LogBox.Name = "LogBox"
         Me.LogBox.ReadOnly = True
-        Me.LogBox.Size = New System.Drawing.Size(463, 401)
+        Me.LogBox.Size = New System.Drawing.Size(462, 401)
         Me.LogBox.TabIndex = 8
         Me.LogBox.Text = "Please click 'New Game'"
         '
@@ -187,16 +187,18 @@ Partial Class GameWindow
         Me.BurnRateSelector.Location = New System.Drawing.Point(162, 174)
         Me.BurnRateSelector.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.BurnRateSelector.Name = "BurnRateSelector"
-        Me.BurnRateSelector.Size = New System.Drawing.Size(255, 26)
+        Me.BurnRateSelector.Size = New System.Drawing.Size(252, 26)
         Me.BurnRateSelector.TabIndex = 15
         '
         'Floor
         '
-        Me.Floor.BackColor = System.Drawing.Color.Red
-        Me.Floor.Location = New System.Drawing.Point(492, 668)
+        Me.Floor.BackColor = System.Drawing.Color.Transparent
+        Me.Floor.BackgroundImage = Global.game.My.Resources.Resources.mars
+        Me.Floor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Floor.Location = New System.Drawing.Point(492, 661)
         Me.Floor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Floor.Name = "Floor"
-        Me.Floor.Size = New System.Drawing.Size(306, 41)
+        Me.Floor.Size = New System.Drawing.Size(306, 62)
         Me.Floor.TabIndex = 16
         Me.Floor.TabStop = False
         '

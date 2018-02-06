@@ -160,16 +160,32 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="audio\CRASHCRASHCRASH.wav" />
+    <None Include="audio\CRASHCRASHCRASH.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="audio\win.wav" />
+    <None Include="audio\win.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="audio\nofuel.wav" />
+    <None Include="audio\nofuel.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="img\ship.png" />
+    <None Include="img\ship.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mars.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\mars.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

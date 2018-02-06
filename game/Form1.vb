@@ -42,8 +42,8 @@ Public Class GameWindow
         ' Reset variables
         SetTime(0)
         SetAlt(1000)
-        SetSpeed(60)
-        SetFuel(200)
+        SetSpeed(40)
+        SetFuel(400)
         RocketPicture.Top = Background.Top
 
         BurnRateSelector.Value = 0
@@ -52,15 +52,12 @@ Public Class GameWindow
     Private Sub WindowLoads(sender As Object, e As EventArgs) Handles MyBase.Load
         ' On load, give rules and make new game
         AddToLog("The goal is to land with a speed of less than 10ft/s")
-
         NewGame()
-
     End Sub
 
     ' Reset game
     Private Sub NewGameButton_Click(sender As Object, e As EventArgs) Handles NewGameButton.Click
         NewGame()
-
     End Sub
 
     ' Handle burn button click, remove specified fuel and advance a tick
@@ -72,14 +69,14 @@ Public Class GameWindow
         If BurntFuel > GlobalVariables.fuel Then BurntFuel = GlobalVariables.fuel ' This is to prevent negative fuel values
         ' Winners don't use drugs
 
+        ' Difficulty for speed calculation
+        SetSpeed(GlobalVariables.speed + (GlobalVariables.time / 4))
+
         ' Logic for figuring out speed, time, alt etc
-        SetFuel(GlobalVariables.fuel - BurntFuel)
         SetTime(GlobalVariables.time + 1)
         SetSpeed(GlobalVariables.speed - (BurntFuel * 0.75))
+        SetFuel(GlobalVariables.fuel - BurntFuel)
         SetAlt(GlobalVariables.alt - GlobalVariables.speed)
-
-        ' Reset speed so we keep GOING DOWN (oops)
-        SetSpeed(GlobalVariables.speed + 3)
 
         ' Check lose/win conditions (respectively)
         ' Add condition to log and disable "next turn" button
