@@ -19,7 +19,7 @@ Public Class GameWindow
         GlobalVariables.alt = val
         AltBox.Text = val.ToString
         ' Set picture box location at the same time
-        RocketPicture.Top = RocketPicture.Top + GlobalVariables.speed / 3
+        RocketPicture.Top = Floor.Top - 30 - GlobalVariables.alt / 2
     End Function
 
     Public Function SetSpeed(val As Integer)
@@ -41,7 +41,7 @@ Public Class GameWindow
         AddToLog("------------ New Game ------------")
         ' Reset variables
         SetTime(0)
-        SetAlt(1000)
+        SetAlt(800)
         SetSpeed(40)
         SetFuel(400)
         RocketPicture.Top = Background.Top
@@ -51,7 +51,7 @@ Public Class GameWindow
 
     Private Sub WindowLoads(sender As Object, e As EventArgs) Handles MyBase.Load
         ' On load, give rules and make new game
-        AddToLog("The goal is to land with a speed of less than 10ft/s")
+        AddToLog("The goal is to land with a speed of less than 10ft/s") '
         NewGame()
     End Sub
 
@@ -80,17 +80,22 @@ Public Class GameWindow
 
         ' Check lose/win conditions (respectively)
         ' Add condition to log and disable "next turn" button
+        ' No fuel
         If GlobalVariables.fuel <= 0 And GlobalVariables.alt > 0 Then
             My.Computer.Audio.Play(My.Resources.nofuel, AudioPlayMode.Background)
             AddToLog("You ran out of fuel!")
             BurnButton.Enabled = False
         End If
+        ' Crashed
         If GlobalVariables.alt <= 0 And GlobalVariables.speed > 10 Then
             SetAlt(0)
+            RocketPicture.Image = My.Resources.bang
+            RocketPicture.SizeMode = PictureBoxSizeMode.CenterImage
             My.Computer.Audio.Play(My.Resources.CRASHCRASHCRASH, AudioPlayMode.Background)
             AddToLog("You crashed!")
             BurnButton.Enabled = False
         End If
+        ' Won!
         If GlobalVariables.alt <= 0 And GlobalVariables.speed < 10 Then
             SetAlt(0)
             My.Computer.Audio.Play(My.Resources.win, AudioPlayMode.Background)
